@@ -1,0 +1,38 @@
+﻿@page "{id:guid}"
+@model RazorPages.Pages.Accounts.DeleteModel
+@{
+    ViewData["Title"] = "Delete Account";
+}
+
+<h1>Delete Account</h1>
+
+<h4>Are you sure you want to delete this account?</h4>
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Account.Username)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Username)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Account.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Account.IsActive)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.IsActive)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Cancel</a>
+    </form>
+</div>

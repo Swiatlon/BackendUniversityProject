@@ -1,0 +1,40 @@
+﻿@page
+@model RazorPages.Pages.Addresses.IndexModel
+@{
+    ViewData["Title"] = "Address Index";
+}
+
+<h1>Address Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>Street</th>
+            <th>House Number</th>
+            <th>Postal Code</th>
+            <th>Country</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Addresses)
+        {
+            <tr>
+                <td>@item.City</td>
+                <td>@item.Street</td>
+                <td>@item.HouseNumber</td>
+                <td>@item.PostalCode</td>
+                <td>@item.Country</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
