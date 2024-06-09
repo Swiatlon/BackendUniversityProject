@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "b/qK5ntcqj5b/EalxQf1v4Z+ZFlKQAiC1fmRGWTdIwLP+C5rCdWgVhBQIZU8mgTvpZlPgXAa0p0/kP/aUQipBQ==",
+  "dgSpecHash": "YbaCh1YbMUWI9d5N915E778KXInM6tava/DuGJ8VjpjLeQW3fgqR0cAE+g8KZorCavoGcTyHwkixZiNwat9W5w==",
   "success": true,
   "projectFilePath": "D:\\Programowanie\\Zaliczenie\\UniversityBackend\\RazorPages\\RazorPages.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Przemek\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
-    "C:\\Users\\Przemek\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -58,8 +57,6 @@
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
-    "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.4\\microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
-    "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.4\\microsoft.aspnet.identity.entityframework.2.2.4.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
@@ -201,36 +198,5 @@
     "C:\\Users\\Przemek\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'EntityFramework 6.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "EntityFramework",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.Identity.Core",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Identity.EntityFramework 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.Identity.EntityFramework",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

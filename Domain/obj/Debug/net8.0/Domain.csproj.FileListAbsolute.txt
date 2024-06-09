@@ -1,0 +1,12 @@
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\bin\Debug\net8.0\Domain.dll
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.dll
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Programowanie\Zaliczenie\UniversityBackend\Domain\obj\Debug\net8.0\ref\Domain.dll

@@ -1,4 +1,9 @@
-﻿using Infrastructure.Data;
+﻿using Application.Mapper;
+using Application.Services;
+using Domain.Entities;
+using Domain.Interfaces;
+using Infrastructure.Data;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,10 +31,26 @@ namespace RazorPages
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<CompanyContext>();
 
+            // Register AutoMapper
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+            // Register Password Hasher
+            builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
+
+            // Add Repositories and Services
+            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IAddressReposiotry, AddressRepository>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            builder.Services.AddScoped<AccountService>();
+            builder.Services.AddScoped<AddressService>();
+            builder.Services.AddScoped<EmployeeService>();
+
             // Add logging
             builder.Logging.ClearProviders();
             builder.Logging.AddConsole();
             builder.Logging.AddDebug();
+
 
             var app = builder.Build();
 
@@ -105,6 +126,10 @@ namespace RazorPages
                     logger.LogError("Failed to create regular user");
                 }
             }
+        }
+
+        private interface IRoleRepository
+        {
         }
     }
 }

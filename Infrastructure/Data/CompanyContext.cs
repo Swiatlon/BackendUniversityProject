@@ -1,13 +1,14 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
+using IdentityUser = Microsoft.AspNetCore.Identity.IdentityUser;
 
 namespace Infrastructure.Data
 {
-    public class CompanyContext : DbContext
+    public class CompanyContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
-
         public CompanyContext(DbContextOptions<CompanyContext> options) : base(options)
         {
         }
@@ -18,6 +19,8 @@ namespace Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder); // This ensures the Identity schema is included
+
             // Define relationships
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Address)
