@@ -3,11 +3,10 @@ using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Threading.Tasks;
 
 namespace RazorPages.Pages.Accounts
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Policy = "AdminPolicy")]
     public class DeleteModel : PageModel
     {
         private readonly AccountService _accountService;

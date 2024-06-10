@@ -31,55 +31,16 @@
                         </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
-                            @if (User.IsInRole("Admin"))
+                            @if (User.IsInRole("Admin") || User.IsInRole("User"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Create">Create Account</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Index">Accounts</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Edit">Edit Account</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Index">Employees</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Delete">Delete Account</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Create">Create Address</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Edit">Edit Address</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Delete">Delete Address</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Create">Create Employee</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Edit">Edit Employee</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Delete">Delete Employee</a>
-                                </li>
-                            }
-                            @if (User.IsInRole("User"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Index">View Accounts</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Details">Account Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Index">View Addresses</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Details">Address Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Index">View Employees</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Employees/Details">Employee Details</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Addresses/Index">Addresses</a>
                                 </li>
                             }
                             <li class="nav-item">

@@ -28,8 +28,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="Account.IsActive" class="control-label"></label>
-                <input asp-for="Account.IsActive" class="form-control" />
+                <select asp-for="Account.IsActive" class="form-control" id="IsActiveSelect">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
                 <span asp-validation-for="Account.IsActive" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="DeactivationDateDiv" style="display:none;">
+                <label asp-for="Account.DeactivationDate" class="control-label"></label>
+                <input asp-for="Account.DeactivationDate" class="form-control" />
+                <span asp-validation-for="Account.DeactivationDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -41,3 +49,16 @@
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('IsActiveSelect').addEventListener('change', function () {
+            var isActive = this.value === 'false';
+            document.getElementById('DeactivationDateDiv').style.display = isActive ? 'block' : 'none';
+        });
+
+        // Initialize the display state on page load
+        document.getElementById('IsActiveSelect').dispatchEvent(new Event('change'));
+    </script>
+}

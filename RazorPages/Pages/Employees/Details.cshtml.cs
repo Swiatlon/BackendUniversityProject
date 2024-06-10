@@ -2,11 +2,10 @@ using Application.Dtos;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Threading.Tasks;
 
 namespace RazorPages.Pages.Employees
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Policy = "AdminOrUserPolicy")]
     public class DetailsModel : PageModel
     {
         private readonly EmployeeService _employeeService;

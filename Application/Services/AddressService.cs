@@ -50,6 +50,7 @@ namespace Application.Services
         public async Task<AddressFullDto> UpdateAddressAsync(AddressFullDto addressDto)
         {
             var addressEntity = await _addressRepository.GetByIdAsync(addressDto.Id);
+
             if (addressEntity is null)
             {
                 throw new KeyNotFoundException("Address not found");

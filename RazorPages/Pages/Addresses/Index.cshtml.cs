@@ -2,12 +2,10 @@ using Application.Dtos;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace RazorPages.Pages.Addresses
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Policy = "AdminOrUserPolicy")]
     public class IndexModel : PageModel
     {
         private readonly AddressService _addressService;
@@ -17,11 +15,11 @@ namespace RazorPages.Pages.Addresses
             _addressService = addressService;
         }
 
-        public IList<AddressFullDto> Addresses { get; set; }
+        public IList<AddressOnlyDto> Addresses { get; set; }
 
         public async Task OnGetAsync()
         {
-            Addresses = (IList<AddressFullDto>)await _addressService.GetAllAddressesAsync();
+            Addresses = (IList<AddressOnlyDto>)await _addressService.GetAllAddressesAsync();
         }
     }
 }

@@ -148,31 +148,6 @@ send_authenticated_request "POST" "api/Employees" '{
 echo "# GET employee by ID"
 send_authenticated_request "GET" "api/Employees/3fa85f64-5717-4562-b3fc-2c963f66afa3" ""
 
-# PUT update an employee
-echo "# PUT update an employee"
-send_authenticated_request "PUT" "api/Employees/3fa85f64-5717-4562-b3fc-2c963f66afa3" '{
-  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa3",
-  "name": "Jane",
-  "surname": "Doe",
-  "birthDate": "1991-02-02T15:36:01.329Z",
-  "pesel": "09876543210",
-  "gender": 1,
-  "address": {
-    "city": "Updated City",
-    "street": "Updated Street",
-    "houseNumber": "123",
-    "apartmentNumber": "10",
-    "postalCode": "12345",
-    "country": "Updated Country"
-  },
-  "account": {
-    "username": "jane.doe",
-    "email": "jane.doe@example.com",
-    "isActive": false,
-    "deactivationDate": "2024-12-31T15:36:01.329Z"
-  }
-}'
-
 # GET employee address by ID
 echo "# GET employee address by ID"
 send_authenticated_request "GET" "api/Employees/3fa85f64-5717-4562-b3fc-2c963f66afa3/address" ""

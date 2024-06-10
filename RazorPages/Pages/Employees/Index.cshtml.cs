@@ -2,12 +2,10 @@ using Application.Dtos;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace RazorPages.Pages.Employees
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Policy = "AdminOrUserPolicy")]
     public class IndexModel : PageModel
     {
         private readonly EmployeeService _employeeService;
@@ -17,11 +15,11 @@ namespace RazorPages.Pages.Employees
             _employeeService = employeeService;
         }
 
-        public IList<EmployeeFullDto> Employees { get; set; }
+        public IList<EmployeeOnlyDto> Employees { get; set; }
 
         public async Task OnGetAsync()
         {
-            Employees = (IList<EmployeeFullDto>)await _employeeService.GetAllEmployeesAsync();
+            Employees = (IList<EmployeeOnlyDto>)await _employeeService.GetAllEmployeesAsync();
         }
     }
 }

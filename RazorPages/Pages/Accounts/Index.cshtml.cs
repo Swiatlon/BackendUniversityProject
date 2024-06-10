@@ -2,12 +2,10 @@ using Application.Dtos;
 using Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace RazorPages.Pages.Accounts
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Policy = "AdminOrUserPolicy")]
     public class IndexModel : PageModel
     {
         private readonly AccountService _accountService;
@@ -17,11 +15,11 @@ namespace RazorPages.Pages.Accounts
             _accountService = accountService;
         }
 
-        public IList<AccountFullDto> Accounts { get; set; }
+        public IList<AccountOnlyDto> Accounts { get; set; }
 
         public async Task OnGetAsync()
         {
-            Accounts = (IList<AccountFullDto>)await _accountService.GetAllAccountsAsync();
+            Accounts = (IList<AccountOnlyDto>)await _accountService.GetAllAccountsAsync();
         }
     }
 }

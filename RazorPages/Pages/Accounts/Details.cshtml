@@ -26,7 +26,7 @@
             @Html.DisplayNameFor(model => model.Account.IsActive)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Account.IsActive)
+            @Model.Account.IsActive.ToString()
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Account.DeactivationDate)
